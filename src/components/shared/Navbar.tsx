@@ -17,13 +17,14 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full border-b bg-white">
+    <nav className="w-full sticky top-0 z-50 border-b bg-white/80 backdrop-blur-md transition-all">
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
         {/* Left - Logo */}
         <Link href="/" className="text-xl font-bold">
           MyLogo
         </Link>
 
+        {/* Center Nav Items */}
         <div className="hidden md:flex gap-6">
           {navItems.map((item) => (
             <Link
@@ -36,6 +37,7 @@ export default function Navbar() {
           ))}
         </div>
 
+        {/* Right Button */}
         <div className="hidden md:block">
           <Button>Donate</Button>
         </div>
